@@ -1,5 +1,99 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Privacy Policy | TechPulse</title><link rel="stylesheet" href="style.css"></head>
-<body><header><div class="container nav"><a class="logo" href="index.html">Tech<span>Pulse</span></a><nav><a href="index.html">Home</a><a href="articles.html">Articles</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header>
-<main class="container page"><p class="tag">PRIVACY</p><h1>Privacy Policy</h1><p>This page explains how TechPulse may handle information when visitors use the website.</p><h2>Information</h2><p>We may receive information that visitors voluntarily provide, such as an email address when contacting us. We may also use standard analytics or advertising services in the future.</p><h2>Advertising</h2><p>If advertising is added, third-party advertising providers may use cookies or similar technologies to provide and measure advertisements, subject to their policies and applicable law.</p><h2>Contact</h2><p>If you have privacy questions, contact TechPulse using the email on our Contact page.</p><p><strong>Important:</strong> Review and customize this policy for your actual services, cookies, analytics and advertising before publishing.</p></main>
-<footer><div class="container"><p>© 2026 TechPulse.</p><p><a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></p></div></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | TechPulse</title>
+  <meta name="description" content="Privacy Policy for TechPulse – how we handle information, cookies and advertising.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <p class="tag">PRIVACY</p>
+  <h1>Privacy Policy</h1>
+  <p>Last updated: September 2026</p>
+
+  <p>TechPulse (“we”, “us”, or “our”) operates the website https://zamandalomzimkulu012-netizen.github.io/techpulse/. This Privacy Policy explains how we collect, use and protect information when you visit our website.</p>
+
+  <h2>Information We Collect</h2>
+  <p>We may collect limited information in the following ways:</p>
+  <ul>
+    <li><strong>Information you provide:</strong> If you contact us by email, we receive the email address and any details you choose to share.</li>
+    <li><strong>Automatically collected data:</strong> Like most websites, we may collect basic technical information such as browser type, device type, and pages visited. This helps us understand how the site is used.</li>
+  </ul>
+
+  <h2>Cookies and Advertising</h2>
+  <p>TechPulse uses Google AdSense to display advertisements. Google and its partners may use cookies and similar technologies to serve ads based on your previous visits to this or other websites.</p>
+  <p>Google’s use of advertising cookies enables it and its partners to serve ads based on your visit to this site and/or other sites on the Internet.</p>
+  <p>You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google’s Ads Settings</a>. Alternatively, you can opt out of some third-party vendors’ use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">www.aboutads.info</a>.</p>
+
+  <h2>How We Use Information</h2>
+  <p>Any information we collect is used only to:</p>
+  <ul>
+    <li>Respond to messages you send us</li>
+    <li>Improve the website and user experience</li>
+    <li>Display relevant advertisements through Google AdSense</li>
+  </ul>
+  <p>We do not sell or rent your personal information to third parties.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>This website uses Google AdSense. Google has its own privacy policy which you can read here: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</p>
+
+  <h2>Children’s Privacy</h2>
+  <p>TechPulse is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. The latest version will always be available on this page.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+  <p><a class="email" href="mailto:zamandalomzimkulu012@gmail.com">zamandalomzimkulu012@gmail.com</a></p>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TechPulse. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="disclaimer.html">Disclaimer</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>
