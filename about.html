@@ -1,5 +1,60 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>About | TechPulse</title><link rel="stylesheet" href="style.css"></head>
-<body><header><div class="container nav"><a class="logo" href="index.html">Tech<span>Pulse</span></a><nav><a href="index.html">Home</a><a href="articles.html">Articles</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header>
-<main class="container page"><p class="tag">ABOUT</p><h1>About TechPulse</h1><p>TechPulse is a technology information website created to make technology easier to understand. We focus on practical guides, beginner-friendly explanations, smartphones, apps, AI and digital safety.</p><p>Our goal is to publish useful, clear and original information that helps readers get more from the technology they use every day.</p></main>
-<footer><div class="container"><p>© 2026 TechPulse.</p><p><a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></p></div></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | TechPulse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <p class="tag">ABOUT</p>
+  <h1>About TechPulse</h1>
+  <p>TechPulse is a technology information website created to make technology easier to understand. We focus on practical guides, beginner-friendly explanations, smartphones, apps, AI and digital safety.</p>
+  <p>Our goal is to publish useful, clear and original information that helps readers get more from the technology they use every day.</p>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TechPulse.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+</body>
+</html>
