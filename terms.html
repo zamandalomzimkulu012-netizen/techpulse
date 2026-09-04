@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | TechPulse</title>
+  <meta name="description" content="Terms of Service for using the TechPulse website.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <p class="tag">TERMS</p>
+  <h1>Terms of Service</h1>
+  <p>Last updated: September 2026</p>
+
+  <p>By accessing and using TechPulse (https://zamandalomzimkulu012-netizen.github.io/techpulse/), you agree to these Terms of Service. If you do not agree, please do not use the website.</p>
+
+  <h2>Use of the Website</h2>
+  <p>You may use TechPulse for personal, non-commercial purposes. You agree not to:</p>
+  <ul>
+    <li>Copy, republish, or redistribute our content without permission</li>
+    <li>Use the site in any way that could harm it or other users</li>
+    <li>Attempt to interfere with the website’s security or functionality</li>
+  </ul>
+
+  <h2>Intellectual Property</h2>
+  <p>All original content on TechPulse (text, design, and branding) is owned by TechPulse unless otherwise stated. You may share links to our articles, but you may not copy full articles without written permission.</p>
+
+  <h2>Content Accuracy</h2>
+  <p>We try to keep information accurate and useful. However, technology changes quickly. We do not guarantee that all content is complete, current, or error-free. Use the information at your own risk.</p>
+
+  <h2>External Links</h2>
+  <p>Our website may contain links to third-party websites. We are not responsible for the content or practices of those sites.</p>
+
+  <h2>Advertising</h2>
+  <p>TechPulse may display advertisements through Google AdSense or similar services. We are not responsible for the content of third-party ads.</p>
+
+  <h2>Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, TechPulse and its operators will not be liable for any direct, indirect, incidental, or consequential damages arising from your use of the website or reliance on its content.</p>
+
+  <h2>Changes to These Terms</h2>
+  <p>We may update these Terms of Service from time to time. Continued use of the site after changes means you accept the updated terms.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about these Terms, email us at <a class="email" href="mailto:zamandalomzimkulu012@gmail.com">zamandalomzimkulu012@gmail.com</a>.</p>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TechPulse. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="disclaimer.html">Disclaimer</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>
