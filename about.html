@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | TechPulse</title>
+  <meta name="description" content="Learn about TechPulse – simple technology guides for everyday people.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,9 +12,7 @@
   <div class="container nav">
     <a class="logo" href="index.html">Tech<span>Pulse</span></a>
     <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
     <nav id="main-nav">
       <a href="index.html">Home</a>
@@ -27,34 +26,66 @@
 <main class="container page">
   <p class="tag">ABOUT</p>
   <h1>About TechPulse</h1>
-  <p>TechPulse is a technology information website created to make technology easier to understand. We focus on practical guides, beginner-friendly explanations, smartphones, apps, AI and digital safety.</p>
-  <p>Our goal is to publish useful, clear and original information that helps readers get more from the technology they use every day.</p>
+
+  <p>TechPulse is a technology website created to make modern tech easier to understand for everyday people.</p>
+
+  <p>Many technology articles are written for experts. They use complicated language or assume the reader already knows a lot. TechPulse takes a different approach. We explain smartphones, artificial intelligence, online safety, apps, and digital tools in clear, simple language that anyone can follow.</p>
+
+  <h2>What we focus on</h2>
+  <ul>
+    <li>Practical smartphone tips</li>
+    <li>Beginner-friendly explanations of AI</li>
+    <li>Online safety and basic cybersecurity</li>
+    <li>How technology affects work, education, and daily life</li>
+    <li>Useful digital tools and free resources</li>
+  </ul>
+
+  <h2>Our goal</h2>
+  <p>Technology should help people, not confuse them. Our goal is to publish useful, original guides that help readers:</p>
+  <ul>
+    <li>Use their phones and apps more effectively</li>
+    <li>Stay safer online</li>
+    <li>Understand new tools like AI without feeling overwhelmed</li>
+    <li>Make better decisions about the technology they use every day</li>
+  </ul>
+
+  <h2>Who is behind TechPulse</h2>
+  <p>TechPulse is independently run and focused on creating clear, practical content. We are not a large media company. We are building a resource for people who want straightforward technology advice without unnecessary jargon.</p>
+
+  <h2>Contact</h2>
+  <p>If you have questions, suggestions, or feedback, you can reach us at:</p>
+  <p><a class="email" href="mailto:zamandalomzimkulu012@gmail.com">zamandalomzimkulu012@gmail.com</a></p>
 </main>
 
 <footer>
   <div class="container">
-    <p>© 2026 TechPulse.</p>
-    <p><a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></p>
+    <p>© 2026 TechPulse. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="disclaimer.html">Disclaimer</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="contact.html">Contact</a>
+    </p>
   </div>
 </footer>
 
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('main-nav');
-
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    toggle.classList.toggle('active');
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.classList.remove('active');
-      toggle.setAttribute('aria-expanded', 'false');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
     });
-  });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 </script>
 </body>
 </html>
