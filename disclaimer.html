@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer | TechPulse</title>
+  <meta name="description" content="Disclaimer for TechPulse technology guides and information.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <p class="tag">DISCLAIMER</p>
+  <h1>Disclaimer</h1>
+  <p>Last updated: September 2026</p>
+
+  <p>The information provided on TechPulse is for general educational and informational purposes only. While we aim to keep content accurate and up to date, we make no guarantees about completeness, reliability, or suitability.</p>
+
+  <h2>No Professional Advice</h2>
+  <p>Content on this website should not be treated as professional, financial, legal, medical, or technical advice. Always verify important information and consult a qualified professional when needed.</p>
+
+  <h2>Technology & Security</h2>
+  <p>Guides about smartphones, online security, AI tools, and related topics are general suggestions. Technology changes quickly. Results can vary depending on your device, software version, and how you apply the advice. You are responsible for any actions you take based on information from this site.</p>
+
+  <h2>External Links & Third Parties</h2>
+  <p>TechPulse may contain links to external websites or mention third-party tools and services. We are not responsible for the content, privacy practices, or availability of those external sites.</p>
+
+  <h2>Advertising</h2>
+  <p>This site uses Google AdSense. Advertisements are provided by third parties and do not necessarily reflect the views of TechPulse.</p>
+
+  <h2>Limitation of Liability</h2>
+  <p>TechPulse and its operators will not be liable for any loss or damage arising from the use of (or inability to use) the information on this website.</p>
+
+  <h2>Contact</h2>
+  <p>If you have questions about this disclaimer, contact us at <a class="email" href="mailto:zamandalomzimkulu012@gmail.com">zamandalomzimkulu012@gmail.com</a>.</p>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TechPulse. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="disclaimer.html">Disclaimer</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>
