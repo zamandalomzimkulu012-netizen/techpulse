@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles & Guides | TechPulse</title>
+  <meta name="description" content="Practical technology guides for everyday people. Learn about smartphones, AI, online security, and how technology affects daily life.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <p class="tag">ARTICLES</p>
+  <h1>Technology Guides</h1>
+  <p style="color:#5b6472; margin-bottom: 40px; max-width: 640px;">
+    Practical, beginner-friendly guides to help you get more from the technology you use every day.
+  </p>
+
+  <!-- Practical Guides -->
+  <h2 style="font-size: 22px; margin-bottom: 20px;">Practical Guides</h2>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">📱 How to Make Your Phone Faster</h3>
+    <p>Simple and practical steps to improve your smartphone’s performance on both Android and iPhone.</p>
+    <a href="how-to-make-your-phone-faster.html">Read guide →</a>
+  </article>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">🤖 What is Artificial Intelligence?</h3>
+    <p>A beginner-friendly explanation of AI, how it works, and how ordinary people already use it every day.</p>
+    <a href="what-is-artificial-intelligence.html">Read guide →</a>
+  </article>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">🔐 Basic Online Security</h3>
+    <p>Simple habits that protect your accounts, personal information, and devices from common online threats.</p>
+    <a href="basic-online-security.html">Read guide →</a>
+  </article>
+
+  <!-- Understanding Technology -->
+  <h2 style="font-size: 22px; margin: 45px 0 20px;">Understanding Technology</h2>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">📱 How Smartphones Have Changed Everyday Life</h3>
+    <p>How smartphones transformed communication, work, entertainment, and daily tasks — and how to use them intentionally.</p>
+    <a href="how-smartphones-changed-everyday-life.html">Read article →</a>
+  </article>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">💼 How Technology Is Changing the Way We Work</h3>
+    <p>Remote work, automation, new skills, and opportunities that technology is creating in the modern workplace.</p>
+    <a href="how-technology-is-changing-work.html">Read article →</a>
+  </article>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">🎓 How Technology Is Changing Education</h3>
+    <p>How online learning, digital tools, and the internet are making education more accessible and flexible.</p>
+    <a href="how-technology-is-changing-education.html">Read article →</a>
+  </article>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">🤖 How AI Is Changing Life for Regular People</h3>
+    <p>Practical ways ordinary people are already using artificial intelligence in daily life, work, and learning.</p>
+    <a href="how-ai-is-changing-life.html">Read article →</a>
+  </article>
+
+  <article class="card" style="margin-bottom: 20px;">
+    <h3 style="margin-top: 0;">💳 How Technology Has Changed the Way We Handle Money</h3>
+    <p>Digital banking, mobile payments, and the important security habits you need when managing money online.</p>
+    <a href="how-technology-changed-money.html">Read article →</a>
+  </article>
+
+  <!-- Free Resources -->
+  <section style="margin-top: 50px; padding: 30px; background: #f5f7ff; border-radius: 14px; text-align: center;">
+    <h2 style="margin-top: 0;">📘 Free Resource</h2>
+    <p style="margin-bottom: 20px;">10 Useful Things You Can Ask ChatGPT to Do for You</p>
+    <a href="10_Useful_Things_You_Can_Ask_ChatGPT_to_Do_for_You-4.pdf" class="download-button" download>
+      📥 Download Free PDF
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TechPulse. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="disclaimer.html">Disclaimer</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
