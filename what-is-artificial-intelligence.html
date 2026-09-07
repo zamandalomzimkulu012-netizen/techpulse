@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Artificial Intelligence? | TechPulse</title>
+  <meta name="description" content="A beginner-friendly explanation of artificial intelligence, how it works, and how ordinary people already use AI every day.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <p class="tag">GUIDE</p>
+  <h1>What is Artificial Intelligence?</h1>
+  <p style="color:#5b6472; margin-bottom: 8px;">A simple explanation for everyday people</p>
+  <p style="font-size: 14px; color:#6b7280; margin-bottom: 28px;">Last updated: September 2026</p>
+
+  <article class="post">
+    
+    <p>Artificial intelligence (AI) refers to computer systems that can perform tasks that normally require human-like abilities. These tasks include understanding language, recognizing images, making recommendations, generating text, and solving problems.</p>
+
+    <p>AI is no longer limited to research labs or science fiction. It is already built into many of the tools people use every day.</p>
+
+    <h2>How AI works in simple terms</h2>
+    <p>Most modern AI systems learn from large amounts of data. Instead of being programmed with fixed rules for every situation, they identify patterns. For example, an AI that recommends videos has learned from millions of previous viewing choices. An AI that generates text has been trained on vast collections of written material.</p>
+
+    <p>This approach is often called machine learning. A popular type of machine learning used today is known as deep learning, which uses layered structures inspired by the way networks of neurons work.</p>
+
+    <h2>Where you already use AI</h2>
+    <ul>
+      <li><strong>Search engines</strong> – Results and suggestions are ranked with the help of AI.</li>
+      <li><strong>Smartphones</strong> – Voice assistants, photo organization, and predictive text rely on AI.</li>
+      <li><strong>Social media and streaming</strong> – Feeds and recommendations are personalized by AI systems.</li>
+      <li><strong>Maps and navigation</strong> – Traffic predictions and route suggestions use AI models.</li>
+      <li><strong>Customer service</strong> – Many chatbots that answer common questions are powered by AI.</li>
+      <li><strong>Email</strong> – Spam filters and smart replies often use AI techniques.</li>
+    </ul>
+
+    <h2>Generative AI</h2>
+    <p>A newer and highly visible form of AI is generative AI. These systems can create new content such as text, images, code, or music. Tools like ChatGPT are examples of generative AI. People use them to draft messages, explain difficult topics, brainstorm ideas, summarize documents, and learn new skills.</p>
+
+    <p>Generative AI is powerful, but it is not perfect. It can produce incorrect or outdated information, so important facts should still be checked.</p>
+
+    <h2>Benefits for everyday people</h2>
+    <p>AI can save time and make technology more accessible. Students can get alternative explanations of topics they find difficult. Small business owners can generate draft content or organize information more quickly. People learning a language can practice conversations. Those with busy schedules can automate simple writing and planning tasks.</p>
+
+    <h2>Important limitations and risks</h2>
+    <p>AI systems can make mistakes. They may reflect biases present in the data they were trained on. They can also be used to create misleading content. For these reasons, it is important to treat AI as a helpful assistant rather than an unquestionable authority.</p>
+
+    <p>Privacy is another consideration. Be careful about pasting sensitive personal, financial, or work-related information into public AI tools.</p>
+
+    <h2>How to use AI responsibly</h2>
+    <ul>
+      <li>Verify important information from reliable sources.</li>
+      <li>Do not share private or confidential data with AI tools unless you understand how the data is handled.</li>
+      <li>Use AI to support your thinking, not replace it entirely.</li>
+      <li>Stay curious and keep learning basic digital skills so you can adapt as the technology improves.</li>
+    </ul>
+
+    <h2>Looking ahead</h2>
+    <p>AI will continue to appear in more everyday tools. Understanding the basics helps you get useful results while avoiding common pitfalls. You do not need to become a technical expert. Simply knowing what AI can and cannot do puts you in a stronger position to use it effectively.</p>
+
+  </article>
+
+  <section style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #e5e9f0;">
+    <h2 style="font-size: 22px; margin-bottom: 16px;">Related Guides</h2>
+    <ul style="padding-left: 20px; line-height: 1.8;">
+      <li><a href="how-to-make-your-phone-faster.html">How to Make Your Phone Faster</a></li>
+      <li><a href="basic-online-security.html">Basic Online Security</a></li>
+      <li><a href="articles.html">View all articles →</a></li>
+    </ul>
+  </section>
+
+  <p style="margin-top: 40px;">
+    <a href="articles.html">← Back to all articles</a>
+  </p>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TechPulse. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="disclaimer.html">Disclaimer</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
