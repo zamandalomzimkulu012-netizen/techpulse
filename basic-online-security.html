@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Online Security | TechPulse</title>
+  <meta name="description" content="Simple and practical habits to protect your accounts, personal information, and devices from common online threats.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Tech<span>Pulse</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <p class="tag">GUIDE</p>
+  <h1>Basic Online Security</h1>
+  <p style="color:#5b6472; margin-bottom: 8px;">Simple habits that protect your accounts and personal information</p>
+  <p style="font-size: 14px; color:#6b7280; margin-bottom: 28px;">Last updated: September 2026</p>
+
+  <article class="post">
+    
+    <p>Online security does not require advanced technical knowledge. Most of the protection you need comes from a few simple, consistent habits. These habits significantly reduce the chance of someone accessing your accounts or personal information.</p>
+
+    <h2>1. Use strong, unique passwords</h2>
+    <p>Never reuse the same password across important accounts (email, banking, social media). If one site is breached, attackers often try the same password on other services.</p>
+    <p>A strong password is long (at least 12 characters) and mixes letters, numbers, and symbols. Even better, use a passphrase made of several random words.</p>
+    <p>Consider using a password manager. It can generate and store strong passwords so you only need to remember one master password.</p>
+
+    <h2>2. Turn on two-factor authentication (2FA)</h2>
+    <p>Two-factor authentication adds a second step after your password, usually a code from an authenticator app or a text message. Even if someone steals your password, they still cannot log in without the second factor.</p>
+    <p>Enable 2FA on your email, banking apps, social media, and any other important accounts. Authenticator apps (such as Google Authenticator or Microsoft Authenticator) are generally more secure than SMS codes.</p>
+
+    <h2>3. Be careful with links and messages</h2>
+    <p>Phishing remains one of the most common ways people lose access to accounts. Attackers send messages that look real and urge you to click a link or share a code.</p>
+    <ul>
+      <li>Never share one-time passwords or verification codes with anyone who contacts you.</li>
+      <li>Check the sender’s email address carefully.</li>
+      <li>Hover over links (on a computer) to see the real destination before clicking.</li>
+      <li>If a message feels urgent or threatening, pause and verify through official channels.</li>
+    </ul>
+
+    <h2>4. Keep your devices and apps updated</h2>
+    <p>Software updates often include security fixes. When you delay updates, you leave known weaknesses open. Turn on automatic updates for your phone’s operating system and for important apps whenever possible.</p>
+
+    <h2>5. Avoid public Wi-Fi for sensitive tasks</h2>
+    <p>Public Wi-Fi networks (cafés, airports, hotels) can be less secure. Avoid logging into banking apps or entering important passwords while connected to open public networks. If you must use public Wi-Fi, a reputable VPN can add a layer of protection.</p>
+
+    <h2>6. Review app permissions</h2>
+    <p>Many apps request access to your camera, microphone, contacts, or location. Only grant permissions that the app actually needs. You can review and revoke permissions later in your phone’s settings.</p>
+
+    <h2>7. Secure your main email account</h2>
+    <p>Your email is the key to almost everything else. If someone gains access to your email, they can often reset passwords for other accounts. Protect your email with a strong unique password and two-factor authentication first.</p>
+
+    <h2>Simple daily habits</h2>
+    <p>Online security is mostly about consistency rather than complicated tools. Use unique passwords, enable two-factor authentication, think before you click, and keep your software updated. These four habits alone block the majority of common attacks.</p>
+
+  </article>
+
+  <section style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #e5e9f0;">
+    <h2 style="font-size: 22px; margin-bottom: 16px;">Related Guides</h2>
+    <ul style="padding-left: 20px; line-height: 1.8;">
+      <li><a href="how-to-make-your-phone-faster.html">How to Make Your Phone Faster</a></li>
+      <li><a href="what-is-artificial-intelligence.html">What is Artificial Intelligence?</a></li>
+      <li><a href="articles.html">View all articles →</a></li>
+    </ul>
+  </section>
+
+  <p style="margin-top: 40px;">
+    <a href="articles.html">← Back to all articles</a>
+  </p>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TechPulse. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="disclaimer.html">Disclaimer</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="contact.html">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
